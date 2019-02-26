@@ -1,0 +1,14 @@
+target 'YLUCar' do
+
+pod 'MJRefresh'
+pod 'MJExtension'
+pod 'MBProgressHUD'
+pod 'AFNetwork'
+pod 'Masonry'
+pod 'SDWebImage'
+pod 'SDCycleScrollView'
+pod 'UMCCommon'
+pod 'UMCAnalytics'
+pod 'UMCSecurityPlugins'
+
+end

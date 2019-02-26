@@ -1,0 +1,51 @@
+//
+//  PrefixHeader.pch
+//  YLUCar
+//
+//  Created by lm on 2019/1/28.
+//  Copyright © 2019 Chenzhiming. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+// RGB颜色
+#define YLColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+// 随机色
+#define YLRandomColor YLColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+// 屏幕宽高
+#define YLScreenWidth [UIScreen mainScreen].bounds.size.width
+#define YLScreenHeight [UIScreen mainScreen].bounds.size.height
+
+// 左右上下边距
+#define LeftMargin 15
+#define TopMargin 12
+#define Margin 5
+
+#define YLFont(number) [UIFont systemFontOfSize:number]
+
+// 判断是否iphone X
+#define KIsiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#import "MJRefresh.h"
+#import "UIImageView+WebCache.h"
+#import "NSString+Extension.h"
+#import "UITextView+Extension.h"
+#import "YLConst.h"
+#import "AFNetworking.h"
+#import "MJRefresh.h"
+#import "MJExtension.h"
+#import "SDCycleScrollView.h"
+#import "MBProgressHUD.h"
+
+// 浏览记录路径
+#define YLBrowsingHistoryPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"browsingHistory.plist"]
+// 历史搜索记录路径
+#define YLSearchHistoryPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"searchHistory.plist"]
+
+#endif /* PrefixHeader_pch */
